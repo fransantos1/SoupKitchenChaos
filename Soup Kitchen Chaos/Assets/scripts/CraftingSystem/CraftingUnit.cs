@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CraftingUnit : MonoBehaviour
+public class CraftingUnit : MonoBehaviour, IInteractable
 {
-    private List<CraftingRecipe> recipes = new List<CraftingRecipe>();
+    [SerializeField]private List<CraftingRecipe> recipes = new List<CraftingRecipe>();
     private List<Food> ingredients = new List<Food>();
 
     public Food output;
@@ -54,5 +54,10 @@ public class CraftingUnit : MonoBehaviour
         }
 
         return null;
+    }
+
+    public virtual void Interact(GameObject instigator)
+    {
+
     }
 }
