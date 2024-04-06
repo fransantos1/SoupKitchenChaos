@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 2120374384}
   - component: {fileID: 2120374383}
   - component: {fileID: 2120374387}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TrashBin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
