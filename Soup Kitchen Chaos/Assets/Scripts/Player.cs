@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
-    public Vector2 lastMovementDirection;
 
     void Start()
     {
@@ -21,10 +20,5 @@ public class Player : MonoBehaviour
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
         rb.velocity = movement * moveSpeed;
-
-        if(moveHorizontal != 0 || moveVertical != 0)
-        {
-            lastMovementDirection = new Vector2(moveHorizontal, moveVertical).normalized;
-        }
     }
 }

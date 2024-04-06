@@ -7,7 +7,6 @@ public class PlayerInteraction : MonoBehaviour
 {
     public float interactionRange = 2f;
     public LayerMask interactableLayer;
-    private Player player;
 
 
     void Update()
@@ -15,7 +14,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.transform.position, player.lastMovementDirection, interactionRange);
+            RaycastHit2D hit = Physics2D.Raycast(transform.transform.position, transform.forward, interactionRange);
 
             if(hit.collider != null)
             {
