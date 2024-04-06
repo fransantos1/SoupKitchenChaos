@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3436528054382611407}
   - component: {fileID: -8734080702482548159}
   - component: {fileID: 8813352034949342786}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,6 +56,7 @@ MonoBehaviour:
   onCrafted:
     m_PersistentCalls:
       m_Calls: []
+  nodes: []
 --- !u!61 &8813352034949342786
 BoxCollider2D:
   m_ObjectHideFlags: 0
