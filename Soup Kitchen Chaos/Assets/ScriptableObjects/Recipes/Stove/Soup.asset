@@ -19,8 +19,8 @@ MonoBehaviour:
     units: 1
   - name: Potato
     units: 1
-  heatingDuration: -1
-  burnTime: -1
+  heatingDuration: 10
+  burnTime: 15
   output:
     name: 
     units: 0

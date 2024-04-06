@@ -30,15 +30,13 @@ public class GenerateRecipe : MonoBehaviour, IInteractable
 
         go.SetActive(true);
 
-        animator.SetBool("interacted", true);
-
-
     }
     public void chooseRecipe() 
     {
         for(int i = 0; i < gameObjects.Count; i++)
         {
             gameObjects[i].SetActive(false);
+
         }
         chosenRecipe = recipes[Random.Range(0, recipes.Count)];
     }

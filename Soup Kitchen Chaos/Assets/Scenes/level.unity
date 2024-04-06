@@ -606,6 +606,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -2817417374398839192, guid: 9fb1bb0696457c140be8a9f645cfb9bc, type: 3}
+      propertyPath: gen
+      value: 
+      objectReference: {fileID: 1218885072}
+    - target: {fileID: -2817417374398839192, guid: 9fb1bb0696457c140be8a9f645cfb9bc, type: 3}
       propertyPath: points
       value: 
       objectReference: {fileID: 82309840}
@@ -613,6 +617,10 @@ PrefabInstance:
       propertyPath: Costumer
       value: 
       objectReference: {fileID: 1218885071}
+    - target: {fileID: -2817417374398839192, guid: 9fb1bb0696457c140be8a9f645cfb9bc, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 168250881}
     - target: {fileID: 7039438545962693961, guid: 9fb1bb0696457c140be8a9f645cfb9bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.2

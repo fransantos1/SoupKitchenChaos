@@ -9,10 +9,14 @@ public class PlateConsumer : CraftingUnit
     public Points points;
     public Animator animator;
     public GenerateRecipe gen;
+    private float delay = 3;
+    private float current = 0;
     public override void Craft()
     {
+
         activeRecipe = Costumer.GetComponent<GenerateRecipe>().chosenRecipe;
         CraftingRecipe recipe = FindRecipe();
+
 
         if (recipe == null)
             return;
@@ -20,7 +24,8 @@ public class PlateConsumer : CraftingUnit
         if (recipe == activeRecipe)
         {
             container.ingredients.Clear();
-            animator.SetBool("interacted", false);
+            animator.SetBool("interacted", true);
+            current = 0;
             gen.chooseRecipe();
             points.AddPoints(20);
 
@@ -32,5 +37,18 @@ public class PlateConsumer : CraftingUnit
         }
 
 
+    }
+
+    void Update()
+    {
+        if (current< delay)
+        {
+            current += Time.deltaTime;
+        }
+        if(current > delay)
+        {
+            animator.SetBool("interacted", false);
+        }
+            
     }
 }
