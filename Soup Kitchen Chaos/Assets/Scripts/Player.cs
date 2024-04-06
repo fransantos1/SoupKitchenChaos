@@ -7,10 +7,12 @@ public class Player : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     public Vector2 lastMovementDirection;
+    private bool isPaused = false;
+    public GameObject pauseMenuGameObject;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();    
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -26,5 +28,32 @@ public class Player : MonoBehaviour
         {
             lastMovementDirection = new Vector2(moveHorizontal, moveVertical).normalized;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        { 
+            if(isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0f;
+        isPaused = true;
+        pauseMenuGameObject.SetActive(true);
+    }
+
+    void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
+        pauseMenuGameObject.SetActive(false);
     }
 }
