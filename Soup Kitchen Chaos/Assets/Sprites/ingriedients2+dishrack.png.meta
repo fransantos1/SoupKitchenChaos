@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ingriedients2+dishrack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 160
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521b30feb07373647bc5284f9f11b5c2
+      internalID: 602391208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ingriedients2+dishrack_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 200
+        width: 160
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5159df0853a5aa644a62e04ad2ecf52d
+      internalID: 1096125725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ingriedients2+dishrack_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 160
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd514777c70dda94084eb7e4cdc57fbd
+      internalID: 1000569228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ingriedients2+dishrack_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 100
+        width: 160
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864c13c0e8c27984283fbdcd43c093f6
+      internalID: 865813544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ingriedients2+dishrack_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8ac2927d2db3b4b9b5de974661c06c
+      internalID: 1963958990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ingriedients2+dishrack_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdfe8ad86d301a43a2eb1b54e9f8796
+      internalID: 222770744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +232,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ingriedients2+dishrack_0: 602391208
+      ingriedients2+dishrack_1: 1096125725
+      ingriedients2+dishrack_2: 1000569228
+      ingriedients2+dishrack_3: 865813544
+      ingriedients2+dishrack_4: 1963958990
+      ingriedients2+dishrack_5: 222770744
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

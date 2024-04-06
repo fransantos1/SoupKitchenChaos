@@ -20,7 +20,6 @@ MonoBehaviour:
   output:
     name: Cooked Meat
     units: 1
-  outputSprite: {fileID: 0}
+  outputSprite: {fileID: -1945019526, guid: 7680ff6098b46d04e8bbd894b2bac389, type: 3}
   containerType: 0
   isOrdered: 0
-  nodes: []

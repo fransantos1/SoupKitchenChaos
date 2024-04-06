@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fe4b20a93fc54847b9660fe5659a3a6, type: 3}
-  m_Name: CuttedOnion
+  m_Name: RoastedPotato
   m_EditorClassIdentifier: 
   ingredients:
-  - name: Onion
+  - name: Potato
     units: 1
-  heatingDuration: -1
-  burnTime: -1
+  heatingDuration: 10
+  burnTime: 15
   output:
-    name: Cutted Onion
+    name: Roasted Potato
     units: 1
+  outputSprite: {fileID: 0}
+  containerType: 0
   isOrdered: 0
