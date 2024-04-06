@@ -67,8 +67,17 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 
     public virtual bool Store(GameObject instigator,Food item)
     {
-        Put(item);
-        return true;
+        Debug.Log(item.ToString());
+        for(int i = 0;i < recipes.Count; i++)
+        {
+            if (recipes[i].ingredients.Contains(item.ingredient))
+            {
+                Put(item);
+                return true;
+            }
+        }
+        return false;
+        
     }
 
     public GameObject BeginMinigame(Food prize)
