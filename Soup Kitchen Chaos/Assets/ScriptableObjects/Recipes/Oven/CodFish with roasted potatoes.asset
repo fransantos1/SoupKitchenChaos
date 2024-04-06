@@ -21,7 +21,7 @@ MonoBehaviour:
     units: 1
   - name: Lettuce
     units: 1
-  - name: Cuted CodFish
+  - name: Cutted CodFish
     units: 1
   heatingDuration: 15
   burnTime: 20
@@ -31,4 +31,3 @@ MonoBehaviour:
   outputSprite: {fileID: 0}
   containerType: 0
   isOrdered: 0
-  nodes: []

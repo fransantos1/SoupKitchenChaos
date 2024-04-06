@@ -53,6 +53,14 @@ public class CraftingRecipe : ScriptableObject
 
         return state;
     }
+    public bool IsValidIngridient(Food food)
+    {  
+        if(isOrdered && !ingredients[0].Equals(food.ingredient))
+            return false;
+        if (!ingredients.Contains(food.ingredient))
+            return false;
+        return true;
+    }
 
     private bool IsUnorderedValid(List<Food> foods)
     {

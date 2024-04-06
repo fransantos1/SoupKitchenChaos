@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -71,8 +72,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         if (output == null)
         {
             Craft();
-        } else
-        {
+        } else {
             PlayerGrab grab = instigator.GetComponent<PlayerGrab>();
             grab.SetFood(output);
             output = null;
@@ -91,8 +91,11 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
                 return true;
             }
         }
-        return false;
-        
+        return false;    
+    }
+    public virtual Food Retrieve(GameObject instigator)
+    {
+        return container.RemoveIngredient(instigator);
     }
 
     public GameObject BeginMinigame(Food prize)

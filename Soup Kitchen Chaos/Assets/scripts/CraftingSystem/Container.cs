@@ -29,4 +29,10 @@ public class Container
         ingredients.Add(food);
         isDirty = true;
     }
+    public Food RemoveIngredient(GameObject gameobject)
+    {
+        Food send = ingredients[ingredients.Count - 1];
+        ingredients.RemoveAt(ingredients.Count-1);
+        return send;
+    }
 }
