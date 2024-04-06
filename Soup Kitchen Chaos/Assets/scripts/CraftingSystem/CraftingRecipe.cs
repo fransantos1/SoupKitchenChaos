@@ -20,8 +20,6 @@ public class CraftingRecipe : ScriptableObject
 
     [SerializeField] bool isOrdered;
 
-    public List<Vector2> nodes;
-
     public bool IsRecipeValid(Container container)
     {
         List<Food> foods = container.ingredients;

@@ -44,7 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f2d715b21e32f41abc9bcef2133ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipes: []
+  recipes:
+  - {fileID: 11400000, guid: 121bd293f530998458591c284a44a23b, type: 2}
+  - {fileID: 11400000, guid: a405053ef144e4b4cb8700f0b9581847, type: 2}
+  - {fileID: 11400000, guid: b87224be1ebe9614da09bf0410829a07, type: 2}
+  - {fileID: 11400000, guid: edf9f16514032a346b175a794437e4da, type: 2}
   container:
     ingredients: []
     containerType: 0

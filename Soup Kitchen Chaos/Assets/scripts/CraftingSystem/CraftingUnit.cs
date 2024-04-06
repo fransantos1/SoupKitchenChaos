@@ -19,6 +19,8 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 
     public UnityEvent<Food> onCrafted;
 
+    public List<Vector2> nodes;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +43,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
             return;
 
         //output = new Food(recipe.output);
-        BeginMinigame(recipe,new Food(recipe.output,recipe.burnTime,recipe.heatingDuration,recipe.outputSprite));
+        BeginMinigame(new Food(recipe.output,recipe.burnTime,recipe.heatingDuration,recipe.outputSprite));
      //   OnCraft(recipe);
     }
 
@@ -91,7 +93,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         
     }
 
-    public GameObject BeginMinigame(CraftingRecipe recipe,Food prize)
+    public GameObject BeginMinigame(Food prize)
     {
         if (minigame == null)
         {
@@ -101,7 +103,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         }
         GameObject mgobj = Instantiate(minigame);
         Minigame mg = mgobj.GetComponent<Minigame>();
-        mg.points = new List<Vector2>(recipe.nodes);
+        mg.points = new List<Vector2>(nodes);
         mg.minigameSprite = challengeSprite;
         mg.onCompleted.AddListener(() => {
             MakeCraft(prize);
