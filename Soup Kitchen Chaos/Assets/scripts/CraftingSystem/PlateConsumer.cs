@@ -10,14 +10,12 @@ public class PlateConsumer : CraftingUnit
     {
         activeRecipe = Costumer.GetComponent<GenerateRecipe>().chosenRecipe;
         CraftingRecipe recipe = FindRecipe();
-        Debug.Log(recipe);
-        Debug.Log(activeRecipe);
+
         if (recipe == null)
             return;
 
         if (recipe == activeRecipe)
         {
-            Debug.Log("Correct Recipe");
             container.ingredients.Clear();
         }
 

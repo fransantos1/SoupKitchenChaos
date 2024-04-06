@@ -61,7 +61,6 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         {
             if (recipes[i].IsRecipeValid(container))
             {
-                Debug.Log(recipes[i]);
                 return recipes[i];
             }
         }

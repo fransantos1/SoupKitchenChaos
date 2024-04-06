@@ -23,6 +23,7 @@ public class CraftingRecipe : ScriptableObject
     public bool IsRecipeValid(Container container)
     {
         List<Food> foods = container.ingredients;
+        Debug.Log("foods "+container.containerType+" : "+containerType);
         if (container.containerType != containerType)
             return false;
 
@@ -39,6 +40,7 @@ public class CraftingRecipe : ScriptableObject
     private bool IsOrderedValid(List<Food> foods)
     {
         bool state = ingredients.Count == foods.Count;
+        Debug.Log(state);
         if (state)
         {
             for (int i = 0; i < ingredients.Count; i++)
@@ -66,17 +68,18 @@ public class CraftingRecipe : ScriptableObject
     private bool IsUnorderedValid(List<Food> foods)
     {
         bool state = foods.Count >= ingredients.Count;
+        Debug.Log("unordered state " + state);
         
         for (int i = 0; i < foods.Count; i++)
         {
             Food food = foods[i];
-            if (PredicateIngredient(food))
+            if (!(food.isBurned || ingredients.Contains(food.ingredient)))
             {
                 state = false;
                 break;
             }
         }
-
+        Debug.Log("unordered ending " + state);
 
         return state;
     }
