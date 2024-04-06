@@ -120,8 +120,8 @@ MonoBehaviour:
   resumeButton: {fileID: 7264236033625897978}
   optionsButton: {fileID: 9042733360140256787}
   quitButton: {fileID: 232911049867745929}
-  soupPanel: {fileID: 424600128125745426}
-  burgerPanel: {fileID: 0}
+  soupPanel: {fileID: 2622689885795113875}
+  burgerPanel: {fileID: 761345018650861767}
   codPanel: {fileID: 424600128125745426}
   optionsMenu: {fileID: 5242737863294412531}
 --- !u!1 &7509588671838504447
@@ -389,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchorMin.x
@@ -397,7 +397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -437,11 +437,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 60.1511
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75.5949
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -459,6 +459,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BurguerInstructionsPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5704483059122734454, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704483059122734454, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
+      propertyPath: m_TagString
+      value: Recipe
+      objectReference: {fileID: 0}
     - target: {fileID: 7657121144945144856, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_text
       value: Burger
@@ -472,6 +480,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
+--- !u!1 &761345018650861767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5704483059122734454, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
+  m_PrefabInstance: {fileID: 5024524446284391857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7570078629637171118 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
@@ -499,7 +512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchorMin.x
@@ -507,7 +520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -547,11 +560,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 60.1511
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75.5949
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -568,6 +581,14 @@ PrefabInstance:
     - target: {fileID: 5704483059122734454, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_Name
       value: CodFishInstructionsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704483059122734454, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704483059122734454, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
+      propertyPath: m_TagString
+      value: Recipe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -619,7 +640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchorMin.x
@@ -627,7 +648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -667,11 +688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 180.45331
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75.5949
       objectReference: {fileID: 0}
     - target: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -689,6 +710,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoupInstructionsPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5704483059122734454, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704483059122734454, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
+      propertyPath: m_TagString
+      value: Recipe
+      objectReference: {fileID: 0}
     - target: {fileID: 7657121144945144856, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
       propertyPath: m_text
       value: Soup
@@ -702,6 +731,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
+--- !u!1 &2622689885795113875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5704483059122734454, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
+  m_PrefabInstance: {fileID: 7732627304361058021}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5186791808737074426 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3221446178478522911, guid: 996a89385e27b44459ee8521b45a660f, type: 3}
