@@ -10,6 +10,7 @@ public class PlayerGrab : MonoBehaviour
     private Food target;
 
     [SerializeField] SpriteRenderer foodSprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,19 @@ public class PlayerGrab : MonoBehaviour
             {
                 SetFood(pb.food,pb.sprite);
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && target != null)
+        {
+            GameObject g = new GameObject("Drop",typeof(PropBehaviour),typeof(SpriteRenderer));
+            PropBehaviour prop = g.GetComponent<PropBehaviour>();
+            SpriteRenderer rnd = g.GetComponent<SpriteRenderer>();
+            prop.food = target;
+            target = null;
+            prop.sprite = foodSprite.sprite;
+            foodSprite.sprite = null;
+            rnd.sprite = prop.sprite;
+            rnd.transform.position = transform.position;
+
         }
     }
 
