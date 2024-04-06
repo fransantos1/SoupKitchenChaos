@@ -23,14 +23,13 @@ public class OvenCraftingUnit : CraftingUnit
     public override void Craft()
     {
         CraftingRecipe recipe = FindRecipe();
-
+        Debug.Log("Output: " + output);
         if (recipe == null)
             return;
 
         if (output == null)
         {
             output = new Food(recipe.output,recipe.burnTime,recipe.heatingDuration,recipe.outputSprite);
-            Debug.Log("Output: "+ output);
         }
     }
 }
