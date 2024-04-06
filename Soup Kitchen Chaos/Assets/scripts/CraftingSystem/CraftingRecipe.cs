@@ -14,13 +14,15 @@ public class CraftingRecipe : ScriptableObject
 
     public Ingredient output;
 
-    public string container;
-    public bool containerNeeded;
+    public Container.ContainerType containerType;
 
     [SerializeField] bool isOrdered;
 
-    public bool IsRecipeValid(List<Food> foods)
+    public bool IsRecipeValid(Container container,List<Food> foods)
     {
+        if (container.containerType != containerType)
+            return false;
+
         if (isOrdered)
         {
             return IsOrderedValid(foods);
