@@ -35,7 +35,7 @@ public class CraftingRecipe : ScriptableObject
             for (int i = 0; i < ingredients.Count; i++)
             {
                 Food food = foods[i];
-                if (!food.isBurned &&!foods[i].Equals(ingredients[i]))
+                if (PredicateIngredient(food))
                 {
                     state = false;
                     break;
@@ -53,7 +53,7 @@ public class CraftingRecipe : ScriptableObject
         for (int i = 0; i < foods.Count; i++)
         {
             Food food = foods[i];
-            if (!food.isBurned && !ingredients.Contains(food.ingredient))
+            if (PredicateIngredient(food))
             {
                 state = false;
                 break;
@@ -62,6 +62,11 @@ public class CraftingRecipe : ScriptableObject
 
 
         return state;
+    }
+
+    private bool PredicateIngredient(Food food)
+    {
+        return !food.isBurned || !ingredients.Contains(food.ingredient);
     }
 }
 
@@ -94,8 +99,6 @@ public class Food
     public bool isCooked => heatingProgress <= 0;
 
     public bool isBurned => heatingProgress <= burnTime;
-
-    public bool canBeUsed => isCooked && !isBurned;
 
     public Food(Ingredient ingr)
     {
