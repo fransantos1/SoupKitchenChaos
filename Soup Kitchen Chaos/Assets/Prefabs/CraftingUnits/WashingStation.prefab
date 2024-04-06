@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ada070907aaa6940b230291dba4b394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipes: []
+  recipes:
+  - {fileID: 11400000, guid: 615f1b8724af27b49af8ece053482ec8, type: 2}
   craftingSpeed: 2
   minigame: {fileID: 9103347716263887634, guid: 82cbc3a46ba95b64eba0fd0a12ba85fe, type: 3}
   onCrafted:
