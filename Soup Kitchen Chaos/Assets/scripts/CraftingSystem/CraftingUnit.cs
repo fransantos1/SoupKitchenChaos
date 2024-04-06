@@ -113,6 +113,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 
     protected void MakeCraft(Food prize)
     {
+        container.ingredients.Clear();
         output = prize;
         OnCraft(prize);
         onCrafted?.Invoke(prize);
