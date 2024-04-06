@@ -59,8 +59,8 @@ MonoBehaviour:
   nodes: []
   scrapFood:
     ingredient:
-      name: 
-      units: 0
+      name: Scrapped Food
+      units: 1
     heatingProgress: 0
     burnTime: 0
     cookedTime: 0
