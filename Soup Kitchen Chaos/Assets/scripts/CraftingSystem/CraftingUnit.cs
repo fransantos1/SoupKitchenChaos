@@ -103,6 +103,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         }
         GameObject mgobj = Instantiate(minigame);
         Minigame mg = mgobj.GetComponent<Minigame>();
+        
         mg.points = new List<Vector2>(nodes);
         mg.minigameSprite = challengeSprite;
         mg.onCompleted.AddListener(() => {
