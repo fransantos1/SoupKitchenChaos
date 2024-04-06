@@ -31,6 +31,8 @@ public class Container
     }
     public Food RemoveIngredient(GameObject gameobject)
     {
+        if (ingredients.Count == 0)
+            return null;
         Food send = ingredients[ingredients.Count - 1];
         ingredients.RemoveAt(ingredients.Count-1);
         return send;

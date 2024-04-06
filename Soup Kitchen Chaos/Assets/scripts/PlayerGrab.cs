@@ -35,6 +35,11 @@ public class PlayerGrab : MonoBehaviour
                 {
                     SetFood(pb.food);
                     Destroy(pb.gameObject);
+                } else if (hit.collider.TryGetComponent<IStorable<Food>>(out IStorable<Food> storable))
+                {
+                    Food f = storable.Retrieve(gameObject);
+                    if (f != null)
+                        SetFood(f);
                 }
                 
             }
