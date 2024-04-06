@@ -7,6 +7,15 @@ public class Container
 {
     public List<Food> ingredients;
 
+    public enum ContainerType
+    {
+        None,
+        Plate,
+        Pan
+    }
+
+    public ContainerType containerType;
+
     public bool isDirty;
 
     public Container()

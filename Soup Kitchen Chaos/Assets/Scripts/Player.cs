@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-
         rb.velocity = movement * moveSpeed;
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, rb.velocity.normalized);
     }
 }

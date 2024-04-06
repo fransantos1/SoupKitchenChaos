@@ -51,7 +51,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable
     {
         for (int i = 0; i < recipes.Count; i++)
         {
-            if (recipes[i].IsRecipeValid(container.ingredients))
+            if (recipes[i].IsRecipeValid(container))
             {
                 return recipes[i];
             }

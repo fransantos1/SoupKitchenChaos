@@ -20,4 +20,5 @@ MonoBehaviour:
   output:
     name: Plate
     units: 1
+  containerType: 0
   isOrdered: 0
