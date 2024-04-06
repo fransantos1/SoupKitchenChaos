@@ -24,6 +24,6 @@ MonoBehaviour:
   output:
     name: 
     units: 0
-  outputSprite: {fileID: 0}
+  outputSprite: {fileID: 1198003674, guid: 3d263b1279242c94aa96a47ff122bd21, type: 3}
   containerType: 0
   isOrdered: 0

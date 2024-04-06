@@ -20,6 +20,6 @@ MonoBehaviour:
   output:
     name: Cutted CodFish
     units: 1
-  outputSprite: {fileID: 0}
+  outputSprite: {fileID: -237097834, guid: 3d263b1279242c94aa96a47ff122bd21, type: 3}
   containerType: 0
   isOrdered: 0

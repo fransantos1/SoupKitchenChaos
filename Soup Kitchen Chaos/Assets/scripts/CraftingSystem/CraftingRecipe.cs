@@ -23,7 +23,6 @@ public class CraftingRecipe : ScriptableObject
     public bool IsRecipeValid(Container container)
     {
         List<Food> foods = container.ingredients;
-        Debug.Log("foods "+container.containerType+" : "+containerType);
         if (container.containerType != containerType)
             return false;
 

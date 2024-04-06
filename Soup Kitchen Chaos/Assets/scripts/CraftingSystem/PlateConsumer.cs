@@ -18,6 +18,10 @@ public class PlateConsumer : CraftingUnit
         {
             container.ingredients.Clear();
         }
+        else
+        {
+            Debug.Log("Valid recipie not correct");
+        }
 
 
     }

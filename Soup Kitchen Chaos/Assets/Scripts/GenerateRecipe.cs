@@ -16,7 +16,6 @@ public class GenerateRecipe : MonoBehaviour, IInteractable
     void Start()
     {        
         chosenRecipe = recipes[Random.Range(0, recipes.Count)];
-        chosenRecipe = recipes[2];
     }
 
     // Update is called once per frame
