@@ -25,7 +25,8 @@ public class Minigame : MonoBehaviour
             go.transform.SetParent(transform, true);
             Image image = go.AddComponent<Image>();
             image.sprite = checkpointSprite;
-            image.rectTransform.sizeDelta = new Vector2(25, 25);
+            image.color = Color.black;
+            image.rectTransform.sizeDelta = new Vector2(40, 40);
             gameObjects.Add(go);
         }
     }
