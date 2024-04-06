@@ -21,6 +21,8 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 
     public List<Vector2> nodes;
 
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +59,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         {
             if (recipes[i].IsRecipeValid(container))
             {
+                animator.SetBool("interacted", false);
                 return recipes[i];
             }
         }
