@@ -4,17 +4,31 @@ using UnityEngine;
 
 public class OvenCraftingUnit : CraftingUnit
 {
-    public float burnedTime = 10;
-    protected override void OnCraft(CraftingRecipe recipe)
-    {
-        
-    }
 
+    private Food cachedFood;
     private void Update()
     {
-        if (output.workingProgress<= -burnedTime)
+        if (output != null)
         {
-            output.isBurned = true;
+            output.heatingProgress += Time.deltaTime * craftingSpeed;
+            if (output.isCooked && cachedFood != output)
+            {
+                onCrafted?.Invoke(output);
+                cachedFood = output;
+            }
+        }
+    }
+
+    public override void Craft()
+    {
+        CraftingRecipe recipe = FindRecipe();
+
+        if (recipe == null)
+            return;
+
+        if (output == null)
+        {
+            output = new Food(recipe.output,recipe.burnTime,recipe.heatingDuration);
         }
     }
 }
