@@ -6,6 +6,7 @@ public class FoodDispenser : MonoBehaviour, IInteractable
 {
     public string ingrediente;
     public Sprite sprite;
+
     public virtual void Interact(GameObject instigator)
     {
         Debug.Log(instigator);
