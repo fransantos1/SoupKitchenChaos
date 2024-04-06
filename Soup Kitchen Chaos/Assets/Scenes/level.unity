@@ -746,6 +746,7 @@ MonoBehaviour:
   gameObjects:
   - {fileID: 974695157}
   - {fileID: 1867268286}
+  - {fileID: 1858403844}
   - {fileID: 1554460796}
   chosenRecipe: {fileID: 0}
   animator: {fileID: 168250881}
@@ -1290,25 +1291,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 424600128125745426, guid: 940040337788b54419fe01ff96677d6b, type: 3}
-      propertyPath: m_TagString
-      value: Recipe
-      objectReference: {fileID: 0}
     - target: {fileID: 761345018650861767, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 761345018650861767, guid: 940040337788b54419fe01ff96677d6b, type: 3}
-      propertyPath: m_TagString
-      value: Recipe
+    - target: {fileID: 1202358435885959180, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202358435885959180, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202358435885959180, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 421.0577
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202358435885959180, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -75.5949
       objectReference: {fileID: 0}
     - target: {fileID: 2622689885795113875, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2622689885795113875, guid: 940040337788b54419fe01ff96677d6b, type: 3}
-      propertyPath: m_TagString
-      value: Recipe
       objectReference: {fileID: 0}
     - target: {fileID: 4010856409878956867, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_Name
@@ -1404,7 +1409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5186791808737074426, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 180.45331
+      value: 300.7555
       objectReference: {fileID: 0}
     - target: {fileID: 5186791808737074426, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1436,11 +1441,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7570078629637171118, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 60.1511
+      value: 180.45331
       objectReference: {fileID: 0}
     - target: {fileID: 7570078629637171118, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -75.5949
+      objectReference: {fileID: 0}
+    - target: {fileID: 8300459044210167653, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2166,6 +2175,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1858403844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8300459044210167653, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+  m_PrefabInstance: {fileID: 1670092757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1867268286 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2622689885795113875, guid: 940040337788b54419fe01ff96677d6b, type: 3}
