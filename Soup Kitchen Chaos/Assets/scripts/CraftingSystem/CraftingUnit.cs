@@ -58,7 +58,6 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
     {
         for (int i = 0; i < recipes.Count; i++)
         {
-            Debug.Log(recipes[i]);
             if (recipes[i].IsRecipeValid(container))
             {
                 return recipes[i];
