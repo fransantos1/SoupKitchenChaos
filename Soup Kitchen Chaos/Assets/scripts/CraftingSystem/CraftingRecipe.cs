@@ -18,8 +18,9 @@ public class CraftingRecipe : ScriptableObject
 
     [SerializeField] bool isOrdered;
 
-    public bool IsRecipeValid(Container container,List<Food> foods)
+    public bool IsRecipeValid(Container container)
     {
+        List<Food> foods = container.ingredients;
         if (container.containerType != containerType)
             return false;
 
