@@ -68,7 +68,6 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 
     public virtual void Interact(GameObject instigator)
     {
-        Debug.Log("OUTPUT " + output);
         if (output == null)
         {
             Craft();
