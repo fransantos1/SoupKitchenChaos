@@ -393,7 +393,7 @@ MonoBehaviour:
   interactionRange: 2
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!114 &1148402669
 MonoBehaviour:
   m_ObjectHideFlags: 0
