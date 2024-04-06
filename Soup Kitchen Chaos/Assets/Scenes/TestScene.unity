@@ -234,6 +234,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6830521485756398197, guid: b579c47a929b57f4b991ba91ef7402b3, type: 3}
+      propertyPath: craftingSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6830521485756398197, guid: b579c47a929b57f4b991ba91ef7402b3, type: 3}
+      propertyPath: onCrafted.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6830521485756398197, guid: b579c47a929b57f4b991ba91ef7402b3, type: 3}
+      propertyPath: onCrafted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6046531509678160470, guid: b579c47a929b57f4b991ba91ef7402b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

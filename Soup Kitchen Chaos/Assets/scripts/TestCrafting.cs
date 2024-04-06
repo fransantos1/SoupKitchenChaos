@@ -12,14 +12,15 @@ public class TestCrafting : MonoBehaviour
         {
             craftingUnit.Put(new Food(new Ingredient("Onion",1)));
             craftingUnit.Craft();
+            Debug.Log(craftingUnit.output);
+
         }
 
-        Debug.Log(craftingUnit.output);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

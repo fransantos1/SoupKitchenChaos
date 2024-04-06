@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class OvenCraftingUnit : CraftingUnit
 {
-    public float burnedTime = 10;
-    protected override void OnCraft(CraftingRecipe recipe)
-    {
-        
-    }
 
     private void Update()
     {
-        if (output.workingProgress<= -burnedTime)
+        if (output != null)
         {
-            output.isBurned = true;
+            output.heatingProgress += Time.deltaTime * craftingSpeed;
         }
     }
 }
