@@ -396,7 +396,7 @@ MonoBehaviour:
     heatingProgress: 0
     burnTime: 0
     cookedTime: 0
-  sprite: {fileID: -679248644, guid: e10d24c4c5bd0374591fe57f3ccc30ce, type: 3}
+    sprite: {fileID: -679248644, guid: e10d24c4c5bd0374591fe57f3ccc30ce, type: 3}
   rend: {fileID: 1172524442}
 --- !u!212 &1172524442
 SpriteRenderer:

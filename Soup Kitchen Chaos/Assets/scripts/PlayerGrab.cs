@@ -42,11 +42,7 @@ public class PlayerGrab : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && target != null)
         {
 
-
-            bool state = Physics2D.queriesHitTriggers;
-            Physics2D.queriesHitTriggers = true;
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up, transform.up, interactionRange);
-            Physics2D.queriesHitTriggers = state;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up, transform.up, interactionRange,interactableLayer);
 
             if (hit.collider != null && hit.collider.TryGetComponent<IStorable<Food>>(out IStorable<Food> storable))
             {
