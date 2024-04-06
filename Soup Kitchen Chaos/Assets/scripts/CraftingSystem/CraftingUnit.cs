@@ -21,6 +21,8 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 
     public List<Vector2> nodes;
 
+    [SerializeField]protected Food scrapFood;
+
 
     // Start is called before the first frame update
     void Start()
@@ -75,7 +77,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
             PlayerGrab grab = instigator.GetComponent<PlayerGrab>();
             grab.SetFood(output);
             output = null;
-            container.ingredients.Clear();
+            //container.ingredients.Clear();
         }
     }
 

@@ -56,3 +56,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   nodes: []
+  scrapFood:
+    ingredient:
+      name: Scrapped Food
+      units: 1
+    heatingProgress: 0
+    burnTime: -1
+    cookedTime: -1
+    sprite: {fileID: 0}
