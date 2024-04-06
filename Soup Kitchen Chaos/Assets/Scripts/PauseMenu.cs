@@ -35,9 +35,11 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 0f;
         isPaused = true;
+        /*
         soupPanel.SetActive(false);
         burgerPanel.SetActive(false);
         codPanel.SetActive(false);
+        */
         pauseMenuGameObject.SetActive(true);
     }
 
@@ -46,9 +48,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         pauseMenuGameObject.SetActive(false);
+
+        /*
         soupPanel.SetActive(true);
         burgerPanel.SetActive(true);
         codPanel.SetActive(true);
+        */
     }
 
     public void OpenOptionsMenu()
