@@ -14,6 +14,7 @@ public class OvenCraftingUnit : CraftingUnit
             if (output.isCooked && cachedFood != output)
             {
                 onCrafted?.Invoke(output);
+                OnCraft(output);
                 cachedFood = output;
             }
         }

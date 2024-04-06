@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6046531509678160470}
-  - component: {fileID: -6830521485756398197}
+  - component: {fileID: 2396087399378985916}
   m_Layer: 0
   m_Name: Cutting Board
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-6830521485756398197
+--- !u!114 &2396087399378985916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,16 +41,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7157291078714832153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df1bc5f6a0924474bb5d9cb2e2a5da5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ada070907aaa6940b230291dba4b394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   recipes:
-  - {fileID: 11400000, guid: 81a8d803241ed1a4691fc5531adcc05c, type: 2}
-  output:
-    ingredient:
-      name: 
-      units: 0
-    workingProgress: 0
-    isBurned: 0
-  craftingSpeed: 0
+  - {fileID: 11400000, guid: 84c721298bd1b054eb26e0940a0cdc6f, type: 2}
+  - {fileID: 11400000, guid: 488564d2964e1784bb743a7b540a9507, type: 2}
+  - {fileID: 11400000, guid: 7b5d05d03b2f0fb46b029a9e6dbe7a88, type: 2}
+  - {fileID: 11400000, guid: f8dc81e68eca3a8458d12ab4618078dd, type: 2}
+  craftingSpeed: 1
   minigame: {fileID: 9103347716263887634, guid: 82cbc3a46ba95b64eba0fd0a12ba85fe, type: 3}
+  onCrafted:
+    m_PersistentCalls:
+      m_Calls: []

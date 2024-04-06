@@ -14,6 +14,9 @@ public class CraftingRecipe : ScriptableObject
 
     public Ingredient output;
 
+    public string container;
+    public bool containerNeeded;
+
     [SerializeField] bool isOrdered;
 
     public bool IsRecipeValid(List<Food> foods)
