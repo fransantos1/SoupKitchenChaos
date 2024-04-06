@@ -66,6 +66,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 
     public virtual void Interact(GameObject instigator)
     {
+        Debug.Log("OUTPUT " + output);
         if (output == null)
         {
             Craft();
@@ -73,8 +74,8 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         {
             PlayerGrab grab = instigator.GetComponent<PlayerGrab>();
             grab.SetFood(output);
-
             output = null;
+            container.ingredients.Clear();
         }
     }
 
