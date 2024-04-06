@@ -137,6 +137,14 @@ public class Food
         this.sprite = sprite;
     }
 
+    public Food(Food food)
+    {
+        this.ingredient = food.ingredient;
+        this.burnTime = food.burnTime;
+        this.cookedTime = food.cookedTime;
+        this.sprite = food.sprite;
+    }
+
     public override string ToString()
     {
         return ingredient.ToString() + " - " + heatingProgress;
