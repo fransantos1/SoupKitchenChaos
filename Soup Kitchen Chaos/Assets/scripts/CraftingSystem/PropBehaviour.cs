@@ -5,22 +5,20 @@ using UnityEngine;
 public class PropBehaviour : MonoBehaviour
 {
     public Food food;
-    public Sprite sprite;
 
     [SerializeField] private SpriteRenderer rend;
     // Start is called before the first frame update
     void Start()
     {
-        if (rend != null)
+        if (rend != null && food != null)
         {
-            rend.sprite = sprite;
+            rend.sprite = food.sprite;
         }
     }
 
     public void SetFood(Food f)
     {
         this.food = f;
-        this.sprite = f.sprite;
         if (rend != null)
         {
             rend.sprite = f.sprite;
