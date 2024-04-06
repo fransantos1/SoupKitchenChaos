@@ -8,7 +8,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable
     [SerializeField]private List<CraftingRecipe> recipes = new List<CraftingRecipe>();
     private List<Food> ingredients = new List<Food>();
 
-    [System.NonSerialized]public Food output;
+    public Food output { get; protected set; }
 
     public float craftingSpeed;
 
@@ -40,7 +40,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable
      //   OnCraft(recipe);
     }
 
-    protected virtual void OnCraft(CraftingRecipe recipe)
+    protected virtual void OnCraft(Food prize)
     {
     }
 
@@ -64,14 +64,26 @@ public class CraftingUnit : MonoBehaviour, IInteractable
 
     public GameObject BeginMinigame(Food prize)
     {
+        if (minigame == null)
+        {
+            MakeCraft(prize);
+
+            return null;
+        }
         GameObject mgobj = Instantiate(minigame);
         Minigame mg = mgobj.GetComponent<Minigame>();
         mg.onCompleted.AddListener(() => {
-            output = prize;
-            onCrafted?.Invoke(prize);
+            MakeCraft(prize);
         });
         
 
         return mgobj;
+    }
+
+    protected void MakeCraft(Food prize)
+    {
+        output = prize;
+        OnCraft(prize);
+        onCrafted?.Invoke(prize);
     }
 }

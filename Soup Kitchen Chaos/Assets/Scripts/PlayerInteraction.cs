@@ -14,7 +14,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.transform.position, transform.forward, interactionRange);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, interactionRange);
 
             if(hit.collider != null)
             {
