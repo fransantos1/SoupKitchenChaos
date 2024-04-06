@@ -15,6 +15,8 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 
     public GameObject minigame;
 
+    public Sprite challengeSprite;
+
     public UnityEvent<Food> onCrafted;
 
 
@@ -39,7 +41,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
             return;
 
         //output = new Food(recipe.output);
-        BeginMinigame(new Food(recipe.output,recipe.burnTime,recipe.heatingDuration));
+        BeginMinigame(recipe,new Food(recipe.output,recipe.burnTime,recipe.heatingDuration,recipe.outputSprite));
      //   OnCraft(recipe);
     }
 
@@ -62,7 +64,16 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 
     public virtual void Interact(GameObject instigator)
     {
-        Craft();
+        if (output == null)
+        {
+            Craft();
+        } else
+        {
+            PlayerGrab grab = instigator.GetComponent<PlayerGrab>();
+            grab.SetFood(output);
+
+            output = null;
+        }
     }
 
     public virtual bool Store(GameObject instigator,Food item)
@@ -80,7 +91,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         
     }
 
-    public GameObject BeginMinigame(Food prize)
+    public GameObject BeginMinigame(CraftingRecipe recipe,Food prize)
     {
         if (minigame == null)
         {
@@ -90,6 +101,8 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         }
         GameObject mgobj = Instantiate(minigame);
         Minigame mg = mgobj.GetComponent<Minigame>();
+        mg.points = new List<Vector2>(recipe.nodes);
+        mg.minigameSprite = challengeSprite;
         mg.onCompleted.AddListener(() => {
             MakeCraft(prize);
         });

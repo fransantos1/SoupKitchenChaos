@@ -17,13 +17,13 @@ public class PropBehaviour : MonoBehaviour
         }
     }
 
-    public void SetFood(Food f,Sprite s)
+    public void SetFood(Food f)
     {
         this.food = f;
-        this.sprite = s;
+        this.sprite = f.sprite;
         if (rend != null)
         {
-            rend.sprite = s;
+            rend.sprite = f.sprite;
         }
     }
 }

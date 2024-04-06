@@ -14,9 +14,13 @@ public class CraftingRecipe : ScriptableObject
 
     public Ingredient output;
 
+    public Sprite outputSprite;
+
     public Container.ContainerType containerType;
 
     [SerializeField] bool isOrdered;
+
+    public List<Vector2> nodes;
 
     public bool IsRecipeValid(Container container)
     {
@@ -107,9 +111,17 @@ public class Food
 
     public bool isBurned => heatingProgress >= burnTime;
 
+    public Sprite sprite;
+
     public Food(Ingredient ingr)
     {
         this.ingredient = ingr;
+    }
+
+    public Food(Ingredient ingr,Sprite sprite)
+    {
+        this.ingredient = ingr;
+        this.sprite = sprite;
     }
 
     public Food(Ingredient ingr,float burnTime,float cookedTime)
@@ -117,6 +129,14 @@ public class Food
         this.ingredient = ingr;
         this.burnTime = burnTime;
         this.cookedTime = cookedTime;
+    }
+
+    public Food(Ingredient ingr, float burnTime, float cookedTime,Sprite sprite)
+    {
+        this.ingredient = ingr;
+        this.burnTime = burnTime;
+        this.cookedTime = cookedTime;
+        this.sprite = sprite;
     }
 
     public override string ToString()

@@ -33,7 +33,7 @@ public class PlayerGrab : MonoBehaviour
             {
                 if (hit.collider.TryGetComponent<PropBehaviour>(out PropBehaviour pb))
                 {
-                    SetFood(pb.food, pb.sprite);
+                    SetFood(pb.food);
                     Destroy(pb.gameObject);
                 }
                 
@@ -60,7 +60,7 @@ public class PlayerGrab : MonoBehaviour
             {
                 GameObject g = Instantiate(drop);
                 PropBehaviour prop = g.GetComponent<PropBehaviour>();
-                prop.SetFood(target, foodSprite.sprite);
+                prop.SetFood(target);
                 target = null;
                 foodSprite.sprite = null;
                 prop.transform.position = transform.position + transform.up;
@@ -68,9 +68,9 @@ public class PlayerGrab : MonoBehaviour
         }
     }
 
-    public void SetFood(Food f,Sprite sprite)
+    public void SetFood(Food f)
     {
         target = f;
-        foodSprite.sprite = sprite;
+        foodSprite.sprite = f.sprite;
     }
 }
