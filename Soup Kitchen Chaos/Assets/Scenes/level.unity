@@ -746,8 +746,8 @@ MonoBehaviour:
   gameObjects:
   - {fileID: 974695157}
   - {fileID: 1867268286}
-  - {fileID: 1554460796}
   - {fileID: 1282353791}
+  - {fileID: 1554460796}
   chosenRecipe: {fileID: 0}
   animator: {fileID: 168250881}
 --- !u!61 &1218885073
