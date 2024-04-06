@@ -68,7 +68,6 @@ public class CraftingRecipe : ScriptableObject
     private bool IsUnorderedValid(List<Food> foods)
     {
         bool state = foods.Count >= ingredients.Count;
-        Debug.Log("unordered state " + state);
         
         for (int i = 0; i < foods.Count; i++)
         {
@@ -79,8 +78,6 @@ public class CraftingRecipe : ScriptableObject
                 break;
             }
         }
-        Debug.Log("unordered ending " + state);
-
         return state;
     }
 
