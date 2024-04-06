@@ -109,10 +109,9 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
             return null;
         }
         GameObject mgobj = Instantiate(minigame);
-        Minigame mg = mgobj.GetComponent<Minigame>();
-        
-        mg.points = new List<Vector2>(nodes);
-        mg.minigameSprite = challengeSprite;
+        MinigameBase mg = mgobj.GetComponent<MinigameBase>();
+        mg.OnSetup(this);
+
         mg.onCompleted.AddListener(() => {
             MakeCraft(prize);
         });

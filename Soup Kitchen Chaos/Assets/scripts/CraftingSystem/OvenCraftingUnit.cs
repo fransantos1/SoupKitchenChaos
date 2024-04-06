@@ -41,6 +41,9 @@ public class OvenCraftingUnit : CraftingUnit
         {
             container.ingredients.Clear();
             output = new Food(recipe.output,recipe.burnTime,recipe.heatingDuration,recipe.outputSprite);
+
+            BeginMinigame(output);
+
         }
     }
 }
