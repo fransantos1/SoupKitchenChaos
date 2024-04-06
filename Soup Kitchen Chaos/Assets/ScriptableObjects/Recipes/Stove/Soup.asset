@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Soup
   m_EditorClassIdentifier: 
   ingredients:
-  - name: Cutted Onions
+  - name: Cutted Onion
     units: 1
   - name: Cutted Meat
     units: 1
@@ -29,4 +29,3 @@ MonoBehaviour:
   outputSprite: {fileID: 0}
   containerType: 0
   isOrdered: 0
-  nodes: []

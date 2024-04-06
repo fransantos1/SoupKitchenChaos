@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fe4b20a93fc54847b9660fe5659a3a6, type: 3}
-  m_Name: Cuted Codfish
+  m_Name: Cutted Onions
   m_EditorClassIdentifier: 
   ingredients:
-  - name: Codfish
+  - name: Onion
     units: 1
   heatingDuration: -1
   burnTime: -1
   output:
-    name: Cuted CodFish
+    name: Cutted Onion
     units: 1
+  outputSprite: {fileID: 0}
+  containerType: 0
   isOrdered: 0

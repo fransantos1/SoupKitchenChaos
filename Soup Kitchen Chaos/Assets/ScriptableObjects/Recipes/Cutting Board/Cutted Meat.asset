@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fe4b20a93fc54847b9660fe5659a3a6, type: 3}
-  m_Name: Cuted Meat
+  m_Name: Cutted Meat
   m_EditorClassIdentifier: 
   ingredients:
   - name: Meat
@@ -18,6 +18,8 @@ MonoBehaviour:
   heatingDuration: -1
   burnTime: -1
   output:
-    name: Cuted Meat
+    name: Cutted Meat
     units: 1
+  outputSprite: {fileID: 0}
+  containerType: 0
   isOrdered: 0

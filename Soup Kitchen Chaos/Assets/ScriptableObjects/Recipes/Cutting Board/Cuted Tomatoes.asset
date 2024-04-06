@@ -18,7 +18,7 @@ MonoBehaviour:
   heatingDuration: -1
   burnTime: -1
   output:
-    name: Cuted Tomatoes
+    name: Cutted Tomatoes
     units: 1
   outputSprite: {fileID: 0}
   containerType: 0
