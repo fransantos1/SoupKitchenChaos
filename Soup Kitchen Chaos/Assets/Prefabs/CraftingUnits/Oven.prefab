@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1697039768312929697}
   - component: {fileID: -3441715374847664658}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Oven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,10 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfa1bf98ca1dcf46bf27fd12b3b8c4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipes:
-  - {fileID: 0}
+  recipes: []
+  container:
+    ingredients: []
+    containerType: 0
+    isDirty: 1
   craftingSpeed: 1
   minigame: {fileID: 9103347716263887634, guid: 82cbc3a46ba95b64eba0fd0a12ba85fe, type: 3}
+  challengeSprite: {fileID: 0}
   onCrafted:
     m_PersistentCalls:
       m_Calls: []
+  nodes: []

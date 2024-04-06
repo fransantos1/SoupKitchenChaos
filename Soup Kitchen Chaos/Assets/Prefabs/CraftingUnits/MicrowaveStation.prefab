@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4139591984186616319}
   - component: {fileID: 2831402603715359250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MicrowaveStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +51,8 @@ MonoBehaviour:
     isDirty: 1
   craftingSpeed: 0
   minigame: {fileID: 0}
+  challengeSprite: {fileID: 0}
   onCrafted:
     m_PersistentCalls:
       m_Calls: []
+  nodes: []

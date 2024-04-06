@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7039438545962693961}
   - component: {fileID: -2817417374398839192}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plate Consumer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,4 +59,5 @@ MonoBehaviour:
   onCrafted:
     m_PersistentCalls:
       m_Calls: []
+  nodes: []
   activeRecipe: 
