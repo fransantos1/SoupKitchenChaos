@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: CodFish with roasted potatoes
   m_EditorClassIdentifier: 
   ingredients:
+  - name: OvenPlatter
+    units: 1
   - name: Cuted Onions
     units: 1
   - name: Cuted Tomatoes
