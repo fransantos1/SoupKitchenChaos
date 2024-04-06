@@ -2040,7 +2040,7 @@ PrefabInstance:
     - target: {fileID: 2396087399378985916, guid: b579c47a929b57f4b991ba91ef7402b3, type: 3}
       propertyPath: challengeSprite
       value: 
-      objectReference: {fileID: -679248644, guid: e10d24c4c5bd0374591fe57f3ccc30ce, type: 3}
+      objectReference: {fileID: -958631799, guid: e10d24c4c5bd0374591fe57f3ccc30ce, type: 3}
     - target: {fileID: 2396087399378985916, guid: b579c47a929b57f4b991ba91ef7402b3, type: 3}
       propertyPath: nodes.Array.size
       value: 5
