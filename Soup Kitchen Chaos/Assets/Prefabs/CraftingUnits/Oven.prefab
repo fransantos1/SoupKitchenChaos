@@ -50,7 +50,7 @@ MonoBehaviour:
     containerType: 0
     isDirty: 1
   craftingSpeed: 1
-  minigame: {fileID: 9103347716263887634, guid: 82cbc3a46ba95b64eba0fd0a12ba85fe, type: 3}
+  minigame: {fileID: 9103347716263887634, guid: dd7da93c3d3f57948adac42bee6f3774, type: 3}
   challengeSprite: {fileID: 0}
   onCrafted:
     m_PersistentCalls:

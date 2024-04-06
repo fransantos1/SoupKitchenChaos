@@ -5,6 +5,7 @@ using UnityEngine;
 public class OvenCraftingUnit : CraftingUnit
 {
     private Food cachedFood;
+    private Food cachedFoodBurned;
     private void Update()
     {
         if (output != null)
@@ -13,12 +14,12 @@ public class OvenCraftingUnit : CraftingUnit
             {
                 output.heatingProgress += Time.deltaTime * craftingSpeed;
             }
-            if (output.isBurned && cachedFood != output)
+            if (output.isBurned && cachedFoodBurned != output)
             {
+                output = new Food(scrapFood);
                 onCrafted?.Invoke(output);
                 OnCraft(output);
-                output = new Food(scrapFood);
-                cachedFood = output;
+                cachedFoodBurned = output;
                 return;
             }
             if (output.isCooked && cachedFood != output)
