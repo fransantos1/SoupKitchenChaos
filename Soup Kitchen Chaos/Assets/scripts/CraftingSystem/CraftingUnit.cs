@@ -62,7 +62,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable
 
     public virtual void Interact(GameObject instigator)
     {
-
+        Craft();
     }
 
     public GameObject BeginMinigame(Food prize)
