@@ -744,6 +744,7 @@ MonoBehaviour:
   - {fileID: 1867268286}
   - {fileID: 1554460796}
   chosenRecipe: {fileID: 0}
+  animator: {fileID: 168250881}
 --- !u!61 &1218885073
 BoxCollider2D:
   m_ObjectHideFlags: 0
