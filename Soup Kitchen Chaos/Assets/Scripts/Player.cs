@@ -20,5 +20,6 @@ public class Player : MonoBehaviour
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
         rb.velocity = movement * moveSpeed;
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, rb.velocity.normalized);
     }
 }
