@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-public class Minigame : MonoBehaviour
+public class Minigame : MinigameBase
 {
     // Start is called before the first frame update
     public List<Vector2> points = new List<Vector2>();
     public List<GameObject> gameObjects = new List<GameObject>();
     private int OffsetSize = 50;
-    public UnityEvent onCompleted;
     public Image minigameImage;
     public Sprite minigameSprite;
     [SerializeField] private Sprite checkpointSprite;
@@ -52,5 +51,11 @@ public class Minigame : MonoBehaviour
     {
         onCompleted?.Invoke();
         Destroy(gameObject);
+    }
+
+    public override void OnSetup(CraftingUnit craftUnit)
+    {
+        points = new List<Vector2>(craftUnit.nodes);
+        minigameSprite = craftUnit.challengeSprite;
     }
 }
