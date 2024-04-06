@@ -26,7 +26,7 @@ public class PlayerGrab : MonoBehaviour
         {
             bool state = Physics2D.queriesHitTriggers;
             Physics2D.queriesHitTriggers = true;
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up, transform.up, interactionRange);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up, transform.up, interactionRange,interactableLayer);
             Physics2D.queriesHitTriggers = state;
 
             if (hit.collider != null)
