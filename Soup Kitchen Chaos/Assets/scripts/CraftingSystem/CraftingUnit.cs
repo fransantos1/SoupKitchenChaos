@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class CraftingUnit : MonoBehaviour, IInteractable
 {
     [SerializeField]private List<CraftingRecipe> recipes = new List<CraftingRecipe>();
-    private List<Food> ingredients = new List<Food>();
+
+    public Container container;
 
     public Food output { get; protected set; }
 
@@ -15,6 +16,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable
     public GameObject minigame;
 
     public UnityEvent<Food> onCrafted;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +27,9 @@ public class CraftingUnit : MonoBehaviour, IInteractable
 
     public void Put(Food ingredient)
     {
-        ingredients.Add(ingredient);
+        container.AddIngredient(ingredient);
     }
+
 
     public virtual void Craft()
     {
@@ -48,7 +51,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable
     {
         for (int i = 0; i < recipes.Count; i++)
         {
-            if (recipes[i].IsRecipeValid(ingredients))
+            if (recipes[i].IsRecipeValid(container.ingredients))
             {
                 return recipes[i];
             }
