@@ -90,5 +90,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34f9fa0ece672743b695d4addeea6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingrediente: Onion
+  ingrediente: Lettuce
   sprite: {fileID: 0}
