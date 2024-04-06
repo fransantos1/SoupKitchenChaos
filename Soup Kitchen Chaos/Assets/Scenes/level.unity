@@ -819,6 +819,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 168250881}
     - target: {fileID: 2831402603715359250, guid: 723322d86cba8724baece150abca4e72, type: 3}
+      propertyPath: craftingSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831402603715359250, guid: 723322d86cba8724baece150abca4e72, type: 3}
       propertyPath: recipes.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1248,6 +1252,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Recipe
       objectReference: {fileID: 0}
+    - target: {fileID: 3617817966916289244, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_text
+      value: '1x lettuce
+
+        microwave'
+      objectReference: {fileID: 0}
     - target: {fileID: 4010856409878956867, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1332,6 +1342,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4963052899669390507, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_text
+      value: '1x onion
+
+        1x cutted tomato
+
+        1x lettuce
+
+        1x
+        cutted Codfish
+
+        put everything in the oven'
+      objectReference: {fileID: 0}
     - target: {fileID: 5186791808737074426, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1347,6 +1370,34 @@ PrefabInstance:
     - target: {fileID: 5186791808737074426, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -75.5949
+      objectReference: {fileID: 0}
+    - target: {fileID: 5446226899568405886, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_text
+      value: '1x bread
+
+        1xcooked meat
+
+        1x cheese
+
+        1x lettuce
+
+        1x
+        cutted tomato
+
+        1x cutted onion
+
+        1x bread'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305295228063372842, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_text
+      value: '1xcutted onion
+
+        1x cutted meat
+
+        1x potato
+
+        All
+        boiled '
       objectReference: {fileID: 0}
     - target: {fileID: 7384494589249011323, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_AnchorMax.y

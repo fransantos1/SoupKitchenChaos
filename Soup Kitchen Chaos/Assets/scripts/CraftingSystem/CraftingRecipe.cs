@@ -31,6 +31,7 @@ public class CraftingRecipe : ScriptableObject
             return IsOrderedValid(foods);
         } else
         {
+
             return IsUnorderedValid(foods);
         }
     }
