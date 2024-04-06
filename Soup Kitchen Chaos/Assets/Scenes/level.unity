@@ -560,6 +560,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2817417374398839192, guid: 9fb1bb0696457c140be8a9f645cfb9bc, type: 3}
+      propertyPath: Costumer
+      value: 
+      objectReference: {fileID: 1218885071}
     - target: {fileID: 7039438545962693961, guid: 9fb1bb0696457c140be8a9f645cfb9bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.2
@@ -742,8 +746,8 @@ MonoBehaviour:
   gameObjects:
   - {fileID: 974695157}
   - {fileID: 1867268286}
-  - {fileID: 1554460796}
   - {fileID: 1282353791}
+  - {fileID: 1554460796}
   chosenRecipe: {fileID: 0}
   animator: {fileID: 168250881}
 --- !u!61 &1218885073

@@ -56,12 +56,12 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 
     protected CraftingRecipe FindRecipe()
     {
-
         for (int i = 0; i < recipes.Count; i++)
         {
+            Debug.Log(recipes[i]);
             if (recipes[i].IsRecipeValid(container))
             {
-                Debug.Log(recipes[i]);
+                Debug.Log("Correct One:"+recipes[i]);
                 return recipes[i];
             }
         }
