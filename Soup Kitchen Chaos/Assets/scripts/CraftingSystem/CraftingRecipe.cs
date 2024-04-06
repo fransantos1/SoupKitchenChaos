@@ -44,7 +44,7 @@ public class CraftingRecipe : ScriptableObject
             for (int i = 0; i < ingredients.Count; i++)
             {
                 Food food = foods[i];
-                if (!ingredients.Contains(food.ingredient))
+                if (!ingredients[i].Equals(food.ingredient))
                 {
                     state = false;
                     break;
