@@ -10,23 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fe4b20a93fc54847b9660fe5659a3a6, type: 3}
-  m_Name: CodFish with roasted potatoes
+  m_Name: DeliverSoup
   m_EditorClassIdentifier: 
   ingredients:
-  - name: OvenPlatter
+  - name: Soup
     units: 1
-  - name: Cutted Onion
-    units: 1
-  - name: Cutted Tomato
-    units: 1
-  - name: Lettuce
-    units: 1
-  - name: Cuted CodFish
-    units: 1
-  heatingDuration: 15
-  burnTime: 20
+  heatingDuration: -1
+  burnTime: -1
   output:
-    name: CodFish with roasted potatoes
+    name: Soup
     units: 1
   outputSprite: {fileID: 0}
   containerType: 0

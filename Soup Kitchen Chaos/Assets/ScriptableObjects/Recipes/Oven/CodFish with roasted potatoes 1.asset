@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fe4b20a93fc54847b9660fe5659a3a6, type: 3}
-  m_Name: CodFish with roasted potatoes
+  m_Name: CodFish with roasted potatoes 1
   m_EditorClassIdentifier: 
   ingredients:
   - name: OvenPlatter
     units: 1
   - name: Cutted Onion
     units: 1
-  - name: Cutted Tomato
+  - name: Cutted Tomatoe
     units: 1
   - name: Lettuce
     units: 1
