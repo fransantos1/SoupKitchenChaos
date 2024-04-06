@@ -7,7 +7,9 @@ public class PlayerGrab : MonoBehaviour
     public float interactionRange = 2f;
     public LayerMask interactableLayer;
 
-    public GameObject target;
+    private Food target;
+
+    [SerializeField] SpriteRenderer foodSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +24,16 @@ public class PlayerGrab : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up, transform.up, interactionRange, interactableLayer);
             Debug.Log(hit.collider);
 
-            if (hit.collider != null)
+            if (hit.collider != null && hit.collider.TryGetComponent<PropBehaviour>(out PropBehaviour pb))
             {
-                IInteractable interactableObject = hit.collider.GetComponent<IInteractable>();
-
-                if (interactableObject != null)
-                {
-                    interactableObject.Interact(gameObject);
-                }
+                SetFood(pb.food,pb.sprite);
             }
         }
+    }
+
+    public void SetFood(Food f,Sprite sprite)
+    {
+        target = f;
+        foodSprite.sprite = sprite;
     }
 }
