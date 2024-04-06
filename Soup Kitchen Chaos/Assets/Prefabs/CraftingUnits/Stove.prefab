@@ -51,12 +51,20 @@ MonoBehaviour:
     containerType: 0
     isDirty: 1
   craftingSpeed: 2
-  minigame: {fileID: 9103347716263887634, guid: 82cbc3a46ba95b64eba0fd0a12ba85fe, type: 3}
+  minigame: {fileID: 9103347716263887634, guid: dd7da93c3d3f57948adac42bee6f3774, type: 3}
   challengeSprite: {fileID: 0}
   onCrafted:
     m_PersistentCalls:
       m_Calls: []
   nodes: []
+  scrapFood:
+    ingredient:
+      name: 
+      units: 0
+    heatingProgress: 0
+    burnTime: 0
+    cookedTime: 0
+    sprite: {fileID: 0}
 --- !u!61 &8813352034949342786
 BoxCollider2D:
   m_ObjectHideFlags: 0

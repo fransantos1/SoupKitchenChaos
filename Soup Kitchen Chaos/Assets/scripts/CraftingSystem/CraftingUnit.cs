@@ -95,6 +95,14 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         
     }
 
+    public virtual Food Retrieve(GameObject instigator)
+    {
+        int index = recipes.Count - 1;
+        Food f = container.ingredients[index];
+        container.ingredients.RemoveAt(index);
+        return f;
+    }
+
     public GameObject BeginMinigame(Food prize)
     {
         if (minigame == null)

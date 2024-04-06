@@ -9,4 +9,9 @@ public class TrashBin : MonoBehaviour, IStorable<Food>
     {
         return true;
     }
+
+    public Food Retrieve(GameObject instigator)
+    {
+        return null;
+    }
 }
