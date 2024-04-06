@@ -39,13 +39,12 @@ public class CraftingRecipe : ScriptableObject
     private bool IsOrderedValid(List<Food> foods)
     {
         bool state = ingredients.Count == foods.Count;
-        Debug.Log(state);
         if (state)
         {
             for (int i = 0; i < ingredients.Count; i++)
             {
                 Food food = foods[i];
-                if (PredicateIngredient(food))
+                if (!ingredients.Contains(food.ingredient))
                 {
                     state = false;
                     break;
@@ -67,26 +66,19 @@ public class CraftingRecipe : ScriptableObject
     private bool IsUnorderedValid(List<Food> foods)
     {
         bool state = foods.Count >= ingredients.Count;
-        Debug.Log("unordered state " + state);
         
         for (int i = 0; i < foods.Count; i++)
         {
             Food food = foods[i];
-            if (!(food.isBurned || ingredients.Contains(food.ingredient)))
+            if (!ingredients.Contains(food.ingredient))
             {
                 state = false;
                 break;
             }
         }
-        Debug.Log("unordered ending " + state);
-
         return state;
     }
 
-    private bool PredicateIngredient(Food food)
-    {
-        return !food.isBurned || !ingredients.Contains(food.ingredient);
-    }
 }
 
 [System.Serializable]
