@@ -31,6 +31,7 @@ public class CraftingRecipe : ScriptableObject
             return IsOrderedValid(foods);
         } else
         {
+
             return IsUnorderedValid(foods);
         }
     }
@@ -43,7 +44,7 @@ public class CraftingRecipe : ScriptableObject
             for (int i = 0; i < ingredients.Count; i++)
             {
                 Food food = foods[i];
-                if (PredicateIngredient(food))
+                if (!ingredients[i].Equals(food.ingredient))
                 {
                     state = false;
                     break;
@@ -69,21 +70,15 @@ public class CraftingRecipe : ScriptableObject
         for (int i = 0; i < foods.Count; i++)
         {
             Food food = foods[i];
-            if (PredicateIngredient(food))
+            if (!ingredients.Contains(food.ingredient))
             {
                 state = false;
                 break;
             }
         }
-
-
         return state;
     }
 
-    private bool PredicateIngredient(Food food)
-    {
-        return !food.isBurned || !ingredients.Contains(food.ingredient);
-    }
 }
 
 [System.Serializable]

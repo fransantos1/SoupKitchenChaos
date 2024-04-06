@@ -20,7 +20,6 @@ MonoBehaviour:
   output:
     name: Boiled Potato
     units: 1
-  outputSprite: {fileID: 0}
+  outputSprite: {fileID: -956662170, guid: 3d263b1279242c94aa96a47ff122bd21, type: 3}
   containerType: 0
   isOrdered: 0
-  nodes: []

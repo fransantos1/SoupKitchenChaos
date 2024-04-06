@@ -20,6 +20,6 @@ MonoBehaviour:
   output:
     name: Cutted Onion
     units: 1
-  outputSprite: {fileID: 0}
+  outputSprite: {fileID: 1000569228, guid: eab0e8a165e709b4f842439a7f4a1955, type: 3}
   containerType: 0
   isOrdered: 0

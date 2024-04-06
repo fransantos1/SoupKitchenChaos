@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class PlateConsumer : CraftingUnit
 {
-    public string activeRecipe;
+    public CraftingRecipe activeRecipe;
+    public GameObject Costumer;
     public override void Craft()
     {
+        activeRecipe = Costumer.GetComponent<GenerateRecipe>().chosenRecipe;
         CraftingRecipe recipe = FindRecipe();
+
         if (recipe == null)
             return;
 
-        if (recipe.name == activeRecipe)
+        if (recipe == activeRecipe)
         {
             container.ingredients.Clear();
-
-
+        }
+        else
+        {
+            Debug.Log("Valid recipie not correct");
         }
 
 
