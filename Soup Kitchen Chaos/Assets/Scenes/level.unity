@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &82309838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82309839}
+  - component: {fileID: 82309840}
+  m_Layer: 0
+  m_Name: Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &82309839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82309838}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1722387, y: -1.4371277, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82309840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82309838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2622da20a86ed9842bc773e9dc4062c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 0
 --- !u!1 &168250880
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +605,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2817417374398839192, guid: 9fb1bb0696457c140be8a9f645cfb9bc, type: 3}
+      propertyPath: points
+      value: 
+      objectReference: {fileID: 82309840}
     - target: {fileID: -2817417374398839192, guid: 9fb1bb0696457c140be8a9f645cfb9bc, type: 3}
       propertyPath: Costumer
       value: 
@@ -1248,6 +1297,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -75.5949
       objectReference: {fileID: 0}
+    - target: {fileID: 2141305032205459519, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: points
+      value: 
+      objectReference: {fileID: 82309840}
     - target: {fileID: 2622689885795113875, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4220,3 +4273,4 @@ SceneRoots:
   - {fileID: 1218885074}
   - {fileID: 1013999436}
   - {fileID: 2147027417}
+  - {fileID: 82309839}

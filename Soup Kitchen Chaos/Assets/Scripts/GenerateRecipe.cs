@@ -15,7 +15,7 @@ public class GenerateRecipe : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     void Start()
     {        
-        chosenRecipe = recipes[Random.Range(0, recipes.Count)];
+        chooseRecipe();
     }
 
     // Update is called once per frame
@@ -33,5 +33,13 @@ public class GenerateRecipe : MonoBehaviour, IInteractable
         animator.SetBool("interacted", true);
 
 
+    }
+    public void chooseRecipe() 
+    {
+        for(int i = 0; i < gameObjects.Count; i++)
+        {
+            gameObjects[i].SetActive(false);
+        }
+        chosenRecipe = recipes[Random.Range(0, recipes.Count)];
     }
 }

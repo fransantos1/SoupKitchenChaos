@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject burgerPanel;
     public GameObject codPanel;
     public GameObject optionsMenu;
+    public Points points;
 
     private void Update()
     {
@@ -74,6 +75,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        points.SavePoints();
         Application.Quit();
     }
 }
