@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CraftingUnit : MonoBehaviour, IInteractable
+public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
 {
     [SerializeField]private List<CraftingRecipe> recipes = new List<CraftingRecipe>();
 
@@ -63,6 +63,12 @@ public class CraftingUnit : MonoBehaviour, IInteractable
     public virtual void Interact(GameObject instigator)
     {
 
+    }
+
+    public virtual bool Store(GameObject instigator,Food item)
+    {
+        Put(item);
+        return true;
     }
 
     public GameObject BeginMinigame(Food prize)

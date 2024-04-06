@@ -24,27 +24,47 @@ public class PlayerGrab : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up, transform.up, interactionRange, interactableLayer);
-            Debug.Log(hit.collider);
+            bool state = Physics2D.queriesHitTriggers;
+            Physics2D.queriesHitTriggers = true;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up, transform.up, interactionRange);
+            Physics2D.queriesHitTriggers = state;
 
-            if (hit.collider != null && hit.collider.TryGetComponent<PropBehaviour>(out PropBehaviour pb))
+            if (hit.collider != null)
             {
-                SetFood(pb.food,pb.sprite);
-                Destroy(pb.gameObject);
+                if (hit.collider.TryGetComponent<PropBehaviour>(out PropBehaviour pb))
+                {
+                    SetFood(pb.food, pb.sprite);
+                    Destroy(pb.gameObject);
+                }
+                
             }
         }
         if (Input.GetKeyDown(KeyCode.Q) && target != null)
         {
-            GameObject g = Instantiate(drop);
-            PropBehaviour prop = g.GetComponent<PropBehaviour>();
-            SpriteRenderer rnd = g.GetComponent<SpriteRenderer>();
-            prop.food = target;
-            target = null;
-            prop.sprite = foodSprite.sprite;
-            foodSprite.sprite = null;
-            rnd.sprite = prop.sprite;
-            rnd.transform.position = transform.position;
 
+
+            bool state = Physics2D.queriesHitTriggers;
+            Physics2D.queriesHitTriggers = true;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.up, transform.up, interactionRange);
+            Physics2D.queriesHitTriggers = state;
+
+            if (hit.collider != null && hit.collider.TryGetComponent<IStorable<Food>>(out IStorable<Food> storable))
+            {
+                if (storable.Store(gameObject, target))
+                {
+                    target = null;
+                    foodSprite.sprite = null;
+                }
+            }
+            else
+            {
+                GameObject g = Instantiate(drop);
+                PropBehaviour prop = g.GetComponent<PropBehaviour>();
+                prop.SetFood(target, foodSprite.sprite);
+                target = null;
+                foodSprite.sprite = null;
+                prop.transform.position = transform.position + transform.up;
+            }
         }
     }
 
