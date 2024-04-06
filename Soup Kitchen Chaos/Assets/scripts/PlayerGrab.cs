@@ -11,6 +11,8 @@ public class PlayerGrab : MonoBehaviour
 
     [SerializeField] SpriteRenderer foodSprite;
 
+    [SerializeField] GameObject drop;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +30,12 @@ public class PlayerGrab : MonoBehaviour
             if (hit.collider != null && hit.collider.TryGetComponent<PropBehaviour>(out PropBehaviour pb))
             {
                 SetFood(pb.food,pb.sprite);
+                Destroy(pb.gameObject);
             }
         }
         if (Input.GetKeyDown(KeyCode.Q) && target != null)
         {
-            GameObject g = new GameObject("Drop",typeof(PropBehaviour),typeof(SpriteRenderer));
+            GameObject g = Instantiate(drop);
             PropBehaviour prop = g.GetComponent<PropBehaviour>();
             SpriteRenderer rnd = g.GetComponent<SpriteRenderer>();
             prop.food = target;

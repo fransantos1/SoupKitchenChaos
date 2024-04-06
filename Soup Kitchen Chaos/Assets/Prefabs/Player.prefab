@@ -198,6 +198,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   foodSprite: {fileID: 6486930390376150633}
+  drop: {fileID: 5162138312476998759, guid: 927edd299e4a33549a34e8f90b34e1cd, type: 3}
 --- !u!1 &5345090297366131393
 GameObject:
   m_ObjectHideFlags: 0
