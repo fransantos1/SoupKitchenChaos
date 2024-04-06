@@ -23,7 +23,6 @@ public class CraftingRecipe : ScriptableObject
     public bool IsRecipeValid(Container container)
     {
         List<Food> foods = container.ingredients;
-        Debug.Log("foods "+container.containerType+" : "+containerType);
         if (container.containerType != containerType)
             return false;
 
@@ -40,13 +39,12 @@ public class CraftingRecipe : ScriptableObject
     private bool IsOrderedValid(List<Food> foods)
     {
         bool state = ingredients.Count == foods.Count;
-        Debug.Log(state);
         if (state)
         {
             for (int i = 0; i < ingredients.Count; i++)
             {
                 Food food = foods[i];
-                if (PredicateIngredient(food))
+                if (!ingredients.Contains(food.ingredient))
                 {
                     state = false;
                     break;
@@ -72,7 +70,7 @@ public class CraftingRecipe : ScriptableObject
         for (int i = 0; i < foods.Count; i++)
         {
             Food food = foods[i];
-            if (!(food.isBurned || ingredients.Contains(food.ingredient)))
+            if (!ingredients.Contains(food.ingredient))
             {
                 state = false;
                 break;
@@ -81,10 +79,6 @@ public class CraftingRecipe : ScriptableObject
         return state;
     }
 
-    private bool PredicateIngredient(Food food)
-    {
-        return !food.isBurned || !ingredients.Contains(food.ingredient);
-    }
 }
 
 [System.Serializable]
