@@ -13,10 +13,11 @@ public class CuttingBoardCraftingUnit : CraftingUnit
 
     public void Cutting()
     {
-        output.workingProgress += craftingSpeed;
-        if (output.isCompleted)
-        {
+        
+    }
 
-        }
+    public override void Interact(GameObject instigator)
+    {
+        Cutting();
     }
 }

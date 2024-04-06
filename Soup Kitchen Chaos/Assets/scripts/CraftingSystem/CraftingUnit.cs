@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CraftingUnit : MonoBehaviour, IInteractable
 {
@@ -10,6 +11,10 @@ public class CraftingUnit : MonoBehaviour, IInteractable
     public Food output;
 
     public float craftingSpeed;
+
+    public GameObject minigame;
+
+    public UnityEvent<Food> onCrafted;
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +34,13 @@ public class CraftingUnit : MonoBehaviour, IInteractable
         if (recipe == null)
             return;
 
-        output = new Food(recipe.output);
-        OnCraft(recipe);
+        //output = new Food(recipe.output);
+        BeginMinigame(new Food(recipe.output));
+     //   OnCraft(recipe);
     }
 
     protected virtual void OnCraft(CraftingRecipe recipe)
     {
-        output = new Food(recipe.output);
     }
 
     private CraftingRecipe FindRecipe()
@@ -59,5 +64,19 @@ public class CraftingUnit : MonoBehaviour, IInteractable
     public virtual void Interact(GameObject instigator)
     {
 
+    }
+
+    public GameObject BeginMinigame(Food prize)
+    {
+        GameObject mgobj = Instantiate(minigame);
+        Minigame mg = mgobj.GetComponent<Minigame>();
+        mg.onCompleted.AddListener(() => {
+
+            output = prize;
+            onCrafted?.Invoke(prize);
+        });
+        
+
+        return mgobj;
     }
 }

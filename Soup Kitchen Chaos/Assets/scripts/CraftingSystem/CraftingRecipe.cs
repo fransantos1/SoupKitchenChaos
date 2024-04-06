@@ -18,6 +18,17 @@ public struct Ingredient
 {
     public string name;
     public int units;
+
+    public Ingredient(string name,int units)
+    {
+        this.name = name;
+        this.units = units;
+    }
+
+    public override string ToString()
+    {
+        return $"{name} x{units}";
+    }
 }
 
 [System.Serializable]
@@ -36,5 +47,10 @@ public class Food
     public Food(Ingredient ingr)
     {
         this.ingredient = ingr;
+    }
+
+    public override string ToString()
+    {
+        return ingredient.ToString() + " - " + workingProgress;
     }
 }

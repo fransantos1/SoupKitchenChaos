@@ -37,6 +37,7 @@ public class Minigame : MonoBehaviour
         if (points.Count == 0)
         {
             EndGame();
+            return;
         }
         if (Mathf.Pow((mousePos.x - points[points.Count - 1].x), 2) + Mathf.Pow((mousePos.y - points[points.Count - 1].y), 2) < Mathf.Pow(OffsetSize, 2))
         {

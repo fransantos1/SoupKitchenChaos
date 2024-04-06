@@ -10,8 +10,11 @@ public class TestCrafting : MonoBehaviour
     {
         if (craftingUnit != null)
         {
-            craftingUnit.Interact(gameObject);
+            craftingUnit.Put(new Food(new Ingredient("Onion",1)));
+            craftingUnit.Craft();
         }
+
+        Debug.Log(craftingUnit.output);
     }
 
     // Update is called once per frame

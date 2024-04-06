@@ -53,3 +53,4 @@ MonoBehaviour:
     workingProgress: 0
     isBurned: 0
   craftingSpeed: 0
+  minigame: {fileID: 9103347716263887634, guid: 82cbc3a46ba95b64eba0fd0a12ba85fe, type: 3}
