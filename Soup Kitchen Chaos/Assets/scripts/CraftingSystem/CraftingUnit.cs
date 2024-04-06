@@ -8,7 +8,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable
     [SerializeField]private List<CraftingRecipe> recipes = new List<CraftingRecipe>();
     private List<Food> ingredients = new List<Food>();
 
-    public Food output;
+    [System.NonSerialized]public Food output;
 
     public float craftingSpeed;
 
@@ -36,7 +36,7 @@ public class CraftingUnit : MonoBehaviour, IInteractable
             return;
 
         //output = new Food(recipe.output);
-        BeginMinigame(new Food(recipe.output,-recipe.burnTime));
+        BeginMinigame(new Food(recipe.output,recipe.burnTime,recipe.heatingDuration));
      //   OnCraft(recipe);
     }
 

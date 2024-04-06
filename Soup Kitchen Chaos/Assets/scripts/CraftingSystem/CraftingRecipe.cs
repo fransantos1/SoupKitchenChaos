@@ -95,20 +95,22 @@ public class Food
 
     public float heatingProgress;
     public float burnTime;
+    public float cookedTime;
 
-    public bool isCooked => heatingProgress <= 0;
+    public bool isCooked => heatingProgress >= cookedTime;
 
-    public bool isBurned => heatingProgress <= burnTime;
+    public bool isBurned => heatingProgress >= burnTime;
 
     public Food(Ingredient ingr)
     {
         this.ingredient = ingr;
     }
 
-    public Food(Ingredient ingr,float burnTime)
+    public Food(Ingredient ingr,float burnTime,float cookedTime)
     {
         this.ingredient = ingr;
         this.burnTime = burnTime;
+        this.cookedTime = cookedTime;
     }
 
     public override string ToString()

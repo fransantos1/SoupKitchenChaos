@@ -11,8 +11,12 @@ public class TestCrafting : MonoBehaviour
         if (craftingUnit != null)
         {
             craftingUnit.Put(new Food(new Ingredient("Onion",1)));
+            craftingUnit.onCrafted.AddListener((Food f) =>
+            {
+                Debug.Log(f);
+
+            });
             craftingUnit.Craft();
-            Debug.Log(craftingUnit.output);
 
         }
 
