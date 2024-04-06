@@ -8,7 +8,9 @@ public class GenerateRecipe : MonoBehaviour, IInteractable
     public List<CraftingRecipe> recipes;
     public List<GameObject> gameObjects;
 
-    public CraftingRecipe chosenRecipe;     
+    public CraftingRecipe chosenRecipe;
+
+    public Animator animator;  
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +30,9 @@ public class GenerateRecipe : MonoBehaviour, IInteractable
         GameObject go = gameObjects[recipes.IndexOf(chosenRecipe)];
 
         go.SetActive(true);
+
+        animator.SetBool("interacted", true);
+
+
     }
 }
