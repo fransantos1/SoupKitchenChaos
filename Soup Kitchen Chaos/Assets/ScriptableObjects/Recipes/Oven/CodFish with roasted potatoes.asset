@@ -26,6 +26,6 @@ MonoBehaviour:
   output:
     name: CodFish with roasted potatoes
     units: 1
-  outputSprite: {fileID: 0}
+  outputSprite: {fileID: 1908000737, guid: a5a84a66248192048920203d8d7e4c66, type: 3}
   containerType: 0
   isOrdered: 0
