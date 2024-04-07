@@ -13,7 +13,7 @@ public class ShowHighScore : MonoBehaviour
     {
         int highScore = SaveHighScore.Highscore;
 
-        textMesh.text = "High Score: " + highScore + ToString();
+        textMesh.text = "High Score: " + highScore;
     }
 
     // Update is called once per frame
