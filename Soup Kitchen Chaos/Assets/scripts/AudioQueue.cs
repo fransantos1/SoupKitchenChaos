@@ -13,11 +13,14 @@ public class AudioQueue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         for (int i = 0;i<clips.Count;i++)
         {
             clipQueue.Enqueue(clips[i]);
         }
+        */
 
+        InitializeQueue();
         Shuffle();
         PlayNextClip();
 
@@ -39,6 +42,14 @@ public class AudioQueue : MonoBehaviour
         }
     }
 
+    private void InitializeQueue()
+    {
+        foreach (var clip in clips)
+        {
+            clipQueue.Enqueue(clip);
+        }
+    }
+
     private void PlayNextClip()
     {
         AudioClip originalClip = source.clip;
@@ -57,6 +68,15 @@ public class AudioQueue : MonoBehaviour
     void Shuffle()
     {
         System.Random rng = new System.Random();
+        clips = clips.OrderBy(x => rng.Next()).ToList();
+
+        clipQueue.Clear();
+        foreach(var clip in clips)
+        {
+            clipQueue.Enqueue(clip);
+        }
+
+        /*
         int n = clips.Count;
         while (n > 1)
         {
@@ -66,6 +86,7 @@ public class AudioQueue : MonoBehaviour
             clips[k] = clips[n];
             clips[n] = value;
         }
+        */
 
         // Print shuffled list (for demonstration)
         foreach (var clip in clips)
