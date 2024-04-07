@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SaveHighScore : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class SaveHighScore : MonoBehaviour
     {
         highscore = PlayerPrefs.GetInt(HighScoreKey, 0);
     }
+
 
     private void OnDestroy()
     {
