@@ -20,4 +20,9 @@ public class QuitGameBehaviour : MonoBehaviour
     {
         settings.SetActive(true);
     }
+
+    public void OnSettingsClosed()
+    {
+        settings.SetActive(false);
+    }
 }

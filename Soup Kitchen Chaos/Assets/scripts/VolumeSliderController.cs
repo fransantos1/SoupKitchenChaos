@@ -17,18 +17,13 @@ public class VolumeSliderController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        masterVolume.value = 0.75f;
-        sfxVolume.value = 1;
-        musicVolume.value = 0.25f;
-        OnMasterVolumeChanged(masterVolume.value);
-        OnSFXVolumeChanged(sfxVolume.value);
-        OnMusicVolumeChanged(musicVolume.value);
-    }
+        OnMasterVolumeChanged(AudioSettings.masterVolume);
+        OnSFXVolumeChanged(AudioSettings.sfxVolume);
+        OnMusicVolumeChanged(AudioSettings.musicVolume);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        masterVolume.value = AudioSettings.masterVolume;
+        sfxVolume.value = AudioSettings.sfxVolume;
+        musicVolume.value = AudioSettings.musicVolume;
     }
 
     public void OnMasterVolumeChanged(float v)
