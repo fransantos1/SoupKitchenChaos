@@ -665,6 +665,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 168250881}
     - target: {fileID: -3441715374847664658, guid: a66d96a89057a82498371d6704dafbb3, type: 3}
+      propertyPath: scrapFood.sprite
+      value: 
+      objectReference: {fileID: -101008859, guid: 7680ff6098b46d04e8bbd894b2bac389, type: 3}
+    - target: {fileID: -3441715374847664658, guid: a66d96a89057a82498371d6704dafbb3, type: 3}
       propertyPath: recipes.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1301,6 +1305,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2831402603715359250, guid: 723322d86cba8724baece150abca4e72, type: 3}
+      propertyPath: scrapFood.sprite
+      value: 
+      objectReference: {fileID: -101008859, guid: 7680ff6098b46d04e8bbd894b2bac389, type: 3}
+    - target: {fileID: 2831402603715359250, guid: 723322d86cba8724baece150abca4e72, type: 3}
       propertyPath: recipes.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1434,6 +1442,10 @@ PrefabInstance:
       propertyPath: craftingSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8734080702482548159, guid: 7627f132ffb5bee40b060563c9801599, type: 3}
+      propertyPath: scrapFood.sprite
+      value: 
+      objectReference: {fileID: -101008859, guid: 7680ff6098b46d04e8bbd894b2bac389, type: 3}
     - target: {fileID: -8734080702482548159, guid: 7627f132ffb5bee40b060563c9801599, type: 3}
       propertyPath: recipes.Array.size
       value: 4
@@ -1748,6 +1760,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 424600128125745426, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 561095789665232732, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1884,6 +1900,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4963052899669390507, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_text
+      value: '1x cutted onion
+
+        1x tomato
+
+        1x lettuce
+
+        1x
+        cutted Codfish
+
+        put everything in the oven'
+      objectReference: {fileID: 0}
     - target: {fileID: 5584478022277889185, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1896,9 +1925,29 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7384494589249011323, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384494589249011323, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384494589249011323, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7384494589249011323, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7423677464733093237, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490178393730489261, guid: 940040337788b54419fe01ff96677d6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529844184850576391, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
