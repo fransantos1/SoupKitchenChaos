@@ -31,8 +31,8 @@ public class FoodDispenser : MonoBehaviour, IInteractable
     {
         Vector3 screenPos = mainCamera.WorldToScreenPoint(gameObject.transform.position + (Vector3)offset);
 
-       // RectTransform textRectTransform = textMesh.rectTransform;
-       // textRectTransform.position = screenPos;
+        RectTransform textRectTransform = textMesh.rectTransform;
+        textRectTransform.position = screenPos;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
