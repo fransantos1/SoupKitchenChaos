@@ -665,6 +665,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 168250881}
     - target: {fileID: -3441715374847664658, guid: a66d96a89057a82498371d6704dafbb3, type: 3}
+      propertyPath: scrapFood.sprite
+      value: 
+      objectReference: {fileID: -101008859, guid: 7680ff6098b46d04e8bbd894b2bac389, type: 3}
+    - target: {fileID: -3441715374847664658, guid: a66d96a89057a82498371d6704dafbb3, type: 3}
       propertyPath: recipes.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1301,6 +1305,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2831402603715359250, guid: 723322d86cba8724baece150abca4e72, type: 3}
+      propertyPath: scrapFood.sprite
+      value: 
+      objectReference: {fileID: -101008859, guid: 7680ff6098b46d04e8bbd894b2bac389, type: 3}
+    - target: {fileID: 2831402603715359250, guid: 723322d86cba8724baece150abca4e72, type: 3}
       propertyPath: recipes.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1434,6 +1442,10 @@ PrefabInstance:
       propertyPath: craftingSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8734080702482548159, guid: 7627f132ffb5bee40b060563c9801599, type: 3}
+      propertyPath: scrapFood.sprite
+      value: 
+      objectReference: {fileID: -101008859, guid: 7680ff6098b46d04e8bbd894b2bac389, type: 3}
     - target: {fileID: -8734080702482548159, guid: 7627f132ffb5bee40b060563c9801599, type: 3}
       propertyPath: recipes.Array.size
       value: 4
@@ -1750,7 +1762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 424600128125745426, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 561095789665232732, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_IsActive
