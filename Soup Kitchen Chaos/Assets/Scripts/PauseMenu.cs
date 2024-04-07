@@ -77,12 +77,12 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        points.SavePoints();
         Application.Quit();
     }
 
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        points.SavePoints();
     }
 }

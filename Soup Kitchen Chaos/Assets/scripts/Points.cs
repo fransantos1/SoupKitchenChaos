@@ -14,6 +14,7 @@ public class Points : MonoBehaviour
     public void SavePoints()
     {
         int lastHighScore = PlayerPrefs.GetInt("HIGHSCORE");
+        Debug.Log(lastHighScore);
         if(points > lastHighScore) 
         {
             PlayerPrefs.SetInt("HIGHSCORE", points);
