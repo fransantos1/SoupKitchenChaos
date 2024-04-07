@@ -98,22 +98,29 @@ public class CraftingUnit : MonoBehaviour, IInteractable, IStorable<Food>
         return container.RemoveIngredient(instigator);
     }
 
-    public GameObject BeginMinigame(Food prize)
+    public GameObject BeginMinigame(Food prize,bool preventCompletion = false)
     {
-        if (minigame == null)
+        if (!preventCompletion)
         {
-            MakeCraft(prize);
+            if (minigame == null)
+            {
+                MakeCraft(prize);
 
-            return null;
+                return null;
+            }
         }
         GameObject mgobj = Instantiate(minigame);
         MinigameBase mg = mgobj.GetComponent<MinigameBase>();
+
         mg.OnSetup(this);
 
-        mg.onCompleted.AddListener(() => {
-            MakeCraft(prize);
-        });
-        
+        if (!preventCompletion)
+        {
+            mg.onCompleted.AddListener(() =>
+            {
+                MakeCraft(prize);
+            });
+        }
 
         return mgobj;
     }
