@@ -1203,6 +1203,7 @@ MonoBehaviour:
   burgerPanel: {fileID: 761345018650861767}
   codPanel: {fileID: 424600128125745426}
   optionsMenu: {fileID: 5242737863294412531}
+  points: {fileID: 0}
 --- !u!1 &4559657383454424511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,7 +1714,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.000061035, y: 0}
+  m_SizeDelta: {x: 0.00005, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858637242719958091
 MonoBehaviour:
@@ -2160,27 +2161,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7935572562708940699, guid: aeb90efe160acd649b51e03ba62e6916, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7935572562708940699, guid: aeb90efe160acd649b51e03ba62e6916, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7935572562708940699, guid: aeb90efe160acd649b51e03ba62e6916, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7935572562708940699, guid: aeb90efe160acd649b51e03ba62e6916, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7935572562708940699, guid: aeb90efe160acd649b51e03ba62e6916, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: -904
       objectReference: {fileID: 0}
     - target: {fileID: 7935572562708940699, guid: aeb90efe160acd649b51e03ba62e6916, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: -378
       objectReference: {fileID: 0}
     - target: {fileID: 7935572562708940699, guid: aeb90efe160acd649b51e03ba62e6916, type: 3}
       propertyPath: m_LocalPosition.x
