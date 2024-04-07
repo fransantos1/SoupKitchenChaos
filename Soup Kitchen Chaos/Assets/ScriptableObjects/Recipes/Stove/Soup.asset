@@ -19,11 +19,11 @@ MonoBehaviour:
     units: 1
   - name: Potato
     units: 1
-  heatingDuration: -1
-  burnTime: -1
+  heatingDuration: 10
+  burnTime: 15
   output:
-    name: 
-    units: 0
+    name: Soup
+    units: 1
   outputSprite: {fileID: 1198003674, guid: 3d263b1279242c94aa96a47ff122bd21, type: 3}
   containerType: 0
   isOrdered: 0
