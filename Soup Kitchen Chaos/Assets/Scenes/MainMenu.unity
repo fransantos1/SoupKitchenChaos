@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 5658250}
   - component: {fileID: 5658249}
   m_Layer: 5
-  m_Name: PlayButton (1)
+  m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -909,6 +909,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1602214711945962822, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1602214711945962822, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 858260222}
+    - target: {fileID: 1602214711945962822, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMasterVolumeChanged
+      objectReference: {fileID: 0}
     - target: {fileID: 2659120000830374403, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -932,6 +944,14 @@ PrefabInstance:
     - target: {fileID: 4845872140311442463, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325718299086312315, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 858260222}
+    - target: {fileID: 5325718299086312315, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMusicVolumeChanged
       objectReference: {fileID: 0}
     - target: {fileID: 5914489071826465463, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
       propertyPath: m_Pivot.x
@@ -1040,6 +1060,14 @@ PrefabInstance:
     - target: {fileID: 6294215407228876870, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277317864080166221, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 858260222}
+    - target: {fileID: 7277317864080166221, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSFXVolumeChanged
       objectReference: {fileID: 0}
     - target: {fileID: 9205088628456702743, guid: e6192404ecf6cb7459a3381dc45485a1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3348,8 +3376,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1711457165}
   - {fileID: 5658248}
+  - {fileID: 1711457165}
   - {fileID: 1095532488}
   m_Father: {fileID: 2048467947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
