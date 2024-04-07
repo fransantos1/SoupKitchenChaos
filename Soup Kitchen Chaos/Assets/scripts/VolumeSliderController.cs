@@ -10,10 +10,19 @@ public class VolumeSliderController : MonoBehaviour
 
     public Slider masterVolume;
 
+    public Slider sfxVolume;
+   
+    public Slider musicVolume;
+
     // Start is called before the first frame update
     void Start()
     {
+        masterVolume.value = 0.75f;
+        sfxVolume.value = 1;
+        musicVolume.value = 0.25f;
         OnMasterVolumeChanged(masterVolume.value);
+        OnSFXVolumeChanged(sfxVolume.value);
+        OnMusicVolumeChanged(musicVolume.value);
     }
 
     // Update is called once per frame
@@ -23,6 +32,14 @@ public class VolumeSliderController : MonoBehaviour
     }
 
     public void OnMasterVolumeChanged(float v)
+    {
+        audioMixer.SetFloat("MasterVolume", ToDecibel(v));
+    }
+    public void OnSFXVolumeChanged(float v)
+    {
+        audioMixer.SetFloat("SFXVolume", ToDecibel(v));
+    }
+    public void OnMusicVolumeChanged(float v)
     {
         audioMixer.SetFloat("BGMVolume", ToDecibel(v));
     }
