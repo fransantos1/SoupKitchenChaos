@@ -13,38 +13,27 @@ public class Minigame : MinigameBase
     public Sprite minigameSprite;
     [SerializeField] private Sprite checkpointSprite;
 
+    public BubbleHitDetector lastBubble;
+
 
     void Start()
     {
-        minigameImage.sprite = minigameSprite;
-        for(int i = 0; i < points.Count; i++)
-        {
-            GameObject go = new GameObject("New Object");
-            go.transform.position = points[i];
-            go.transform.SetParent(transform, true);
-            Image image = go.AddComponent<Image>();
-            image.sprite = checkpointSprite;
-            image.color = Color.black;
-            image.rectTransform.sizeDelta = new Vector2(40, 40);
-            gameObjects.Add(go);
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 mousePos = Input.mousePosition;
-        if (points.Count == 0)
+       if (lastBubble == null)
         {
             EndGame();
             return;
         }
-        if (Mathf.Pow((mousePos.x - points[points.Count - 1].x), 2) + Mathf.Pow((mousePos.y - points[points.Count - 1].y), 2) < Mathf.Pow(OffsetSize, 2))
+
+       if (lastBubble.isBroken)
         {
-            Destroy(gameObjects[points.Count - 1]);
-            gameObjects.RemoveAt(points.Count - 1);
-            points.RemoveAt(points.Count - 1);  
-            Debug.Log("Touching");
+            EndGame();
+            return;
         }
     }
     void EndGame()
@@ -57,5 +46,10 @@ public class Minigame : MinigameBase
     {
         points = new List<Vector2>(craftUnit.nodes);
         minigameSprite = craftUnit.challengeSprite;
+    }
+
+    public Vector2 GetPoint(Vector2 originalPoint)
+    {
+        return originalPoint;
     }
 }
