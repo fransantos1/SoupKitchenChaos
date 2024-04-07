@@ -89,9 +89,5 @@ public class AudioQueue : MonoBehaviour
         */
 
         // Print shuffled list (for demonstration)
-        foreach (var clip in clips)
-        {
-            Debug.Log(clip.name);
-        }
     }
 }
