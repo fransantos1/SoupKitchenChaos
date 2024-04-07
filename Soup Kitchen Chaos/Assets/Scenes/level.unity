@@ -1916,7 +1916,7 @@ PrefabInstance:
       propertyPath: m_text
       value: '1x cutted onion
 
-        1x tomato
+        1x cutted tomato
 
         1x lettuce
 
@@ -1959,7 +1959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7490178393730489261, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7529844184850576391, guid: 940040337788b54419fe01ff96677d6b, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
