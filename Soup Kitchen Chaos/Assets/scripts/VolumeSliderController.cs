@@ -28,14 +28,17 @@ public class VolumeSliderController : MonoBehaviour
 
     public void OnMasterVolumeChanged(float v)
     {
+        AudioSettings.masterVolume = v;
         audioMixer.SetFloat("MasterVolume", ToDecibel(v));
     }
     public void OnSFXVolumeChanged(float v)
     {
+        AudioSettings.sfxVolume = v;
         audioMixer.SetFloat("SFXVolume", ToDecibel(v));
     }
     public void OnMusicVolumeChanged(float v)
     {
+        AudioSettings.musicVolume = v;
         audioMixer.SetFloat("BGMVolume", ToDecibel(v));
     }
 
