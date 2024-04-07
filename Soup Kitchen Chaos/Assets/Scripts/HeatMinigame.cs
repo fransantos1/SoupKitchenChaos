@@ -39,10 +39,9 @@ public class HeatMinigame : MinigameBase
 
         transform.position = ownerPosition - transform.up;
 
-        food = craftUnit.output;
-        Debug.Log("food: " + food);
-
         unit = craftUnit;
+
+        food = craftUnit.output;
 
     }
 }
